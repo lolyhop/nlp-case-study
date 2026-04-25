@@ -1,0 +1,195 @@
+{
+    "config": {
+        "model_name": "/root/bert-base-uased",
+        "dataset_name": "/root/nlp-case-study/artifacts/dataset/conll2003",
+        "run_seeds": [
+            42,
+            43,
+            44
+        ],
+        "num_train_epochs": 3,
+        "train_batch_size": 16,
+        "eval_batch_size": 16,
+        "learning_rate": 2e-05,
+        "weight_decay": 0.01,
+        "warmup_ratio": 0.1
+    },
+    "runs": [
+        {
+            "seed": 42,
+            "validation_loss": 0.04706461355090141,
+            "validation_precision": 0.9463324360699865,
+            "validation_recall": 0.946650959272972,
+            "validation_f1": 0.9464916708732963,
+            "validation_accuracy": 0.988512908375842,
+            "validation_macro_precision": 0.9290319455622653,
+            "validation_macro_recall": 0.9279296923112967,
+            "validation_macro_f1": 0.9284512049577448,
+            "validation_runtime": 2.8703,
+            "validation_samples_per_second": 1132.289,
+            "validation_steps_per_second": 71.073,
+            "epoch": 3.0,
+            "test_loss": 0.11960944533348083,
+            "test_precision": 0.910654139336997,
+            "test_recall": 0.9095254957507082,
+            "test_f1": 0.9100894676233502,
+            "test_accuracy": 0.9804027134704425,
+            "test_macro_precision": 0.8666113427120332,
+            "test_macro_recall": 0.8963277110169714,
+            "test_macro_f1": 0.8805192383868319,
+            "test_runtime": 2.7872,
+            "test_samples_per_second": 1238.892,
+            "test_steps_per_second": 77.498
+        },
+        {
+            "seed": 43,
+            "validation_loss": 0.045872271060943604,
+            "validation_precision": 0.946970968283269,
+            "validation_recall": 0.9496802423426456,
+            "validation_f1": 0.9483236702798085,
+            "validation_accuracy": 0.9893695728359487,
+            "validation_macro_precision": 0.9396155428647439,
+            "validation_macro_recall": 0.9309539783063865,
+            "validation_macro_f1": 0.9351594321267434,
+            "validation_runtime": 2.8674,
+            "validation_samples_per_second": 1133.428,
+            "validation_steps_per_second": 71.144,
+            "epoch": 3.0,
+            "test_loss": 0.11422207951545715,
+            "test_precision": 0.9066079295154185,
+            "test_recall": 0.9109419263456091,
+            "test_f1": 0.908769760664135,
+            "test_accuracy": 0.9802735005922257,
+            "test_macro_precision": 0.8665176703065481,
+            "test_macro_recall": 0.8944414160304179,
+            "test_macro_f1": 0.8797223983131871,
+            "test_runtime": 2.7822,
+            "test_samples_per_second": 1241.114,
+            "test_steps_per_second": 77.637
+        },
+        {
+            "seed": 44,
+            "validation_loss": 0.04436648264527321,
+            "validation_precision": 0.9461499748364368,
+            "validation_recall": 0.9491753618310333,
+            "validation_f1": 0.9476602537175502,
+            "validation_accuracy": 0.9891748763677427,
+            "validation_macro_precision": 0.9353923661520298,
+            "validation_macro_recall": 0.9339374626326553,
+            "validation_macro_f1": 0.9346169988469122,
+            "validation_runtime": 2.8717,
+            "validation_samples_per_second": 1131.723,
+            "validation_steps_per_second": 71.037,
+            "epoch": 3.0,
+            "test_loss": 0.11667972058057785,
+            "test_precision": 0.9036229335209286,
+            "test_recall": 0.9097025495750708,
+            "test_f1": 0.9066525498500088,
+            "test_accuracy": 0.9801012167546032,
+            "test_macro_precision": 0.8633439411625996,
+            "test_macro_recall": 0.8988709982571488,
+            "test_macro_f1": 0.8800413809314724,
+            "test_runtime": 2.7888,
+            "test_samples_per_second": 1238.156,
+            "test_steps_per_second": 77.452
+        }
+    ],
+    "validation_summary": {
+        "validation_precision": {
+            "mean": 0.9464844597298975,
+            "std": 0.0004310927450269578
+        },
+        "validation_recall": {
+            "mean": 0.9485021878155503,
+            "std": 0.0016229637766733535
+        },
+        "validation_f1": {
+            "mean": 0.9474918649568851,
+            "std": 0.000927535194698282
+        },
+        "validation_accuracy": {
+            "mean": 0.9890191191931779,
+            "std": 0.0004490698413095603
+        },
+        "validation_macro_precision": {
+            "mean": 0.9346799515263463,
+            "std": 0.005327643373427302
+        },
+        "validation_macro_recall": {
+            "mean": 0.930940377750113,
+            "std": 0.00300390825257654
+        },
+        "validation_macro_f1": {
+            "mean": 0.9327425453104669,
+            "std": 0.003726293061870212
+        },
+        "validation_loss": {
+            "mean": 0.04576778908570608,
+            "std": 0.0013520965048171192
+        }
+    },
+    "test_summary": {
+        "test_precision": {
+            "mean": 0.9069616674577814,
+            "std": 0.0035289250071202905
+        },
+        "test_recall": {
+            "mean": 0.9100566572237959,
+            "std": 0.0007717597279640441
+        },
+        "test_f1": {
+            "mean": 0.9085039260458313,
+            "std": 0.0017338114021986475
+        },
+        "test_accuracy": {
+            "mean": 0.9802591436057572,
+            "std": 0.0001512602383669362
+        },
+        "test_macro_precision": {
+            "mean": 0.8654909847270602,
+            "std": 0.001859984053871557
+        },
+        "test_macro_recall": {
+            "mean": 0.8965467084348461,
+            "std": 0.002222896663729393
+        },
+        "test_macro_f1": {
+            "mean": 0.8800943392104972,
+            "std": 0.00040105106935338976
+        },
+        "test_loss": {
+            "mean": 0.11683708180983861,
+            "std": 0.0026971280154375944
+        }
+    },
+    "best_seed": 42,
+    "best_validation": {
+        "validation_loss": 0.04706461355090141,
+        "validation_precision": 0.9463324360699865,
+        "validation_recall": 0.946650959272972,
+        "validation_f1": 0.9464916708732963,
+        "validation_accuracy": 0.988512908375842,
+        "validation_macro_precision": 0.9290319455622653,
+        "validation_macro_recall": 0.9279296923112967,
+        "validation_macro_f1": 0.9284512049577448,
+        "validation_runtime": 2.8703,
+        "validation_samples_per_second": 1132.289,
+        "validation_steps_per_second": 71.073,
+        "epoch": 3.0
+    },
+    "best_test": {
+        "test_loss": 0.11960944533348083,
+        "test_precision": 0.910654139336997,
+        "test_recall": 0.9095254957507082,
+        "test_f1": 0.9100894676233502,
+        "test_accuracy": 0.9804027134704425,
+        "test_macro_precision": 0.8666113427120332,
+        "test_macro_recall": 0.8963277110169714,
+        "test_macro_f1": 0.8805192383868319,
+        "test_runtime": 2.7872,
+        "test_samples_per_second": 1238.892,
+        "test_steps_per_second": 77.498,
+        "epoch": 3.0
+    },
+    "best_model_checkpoint": "case_study_outputs/ner_baseline/best_checkpoint"
+}

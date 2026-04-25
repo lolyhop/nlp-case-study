@@ -1,0 +1,632 @@
+{
+    "config": {
+      "model_name": "/root/bert-base-uncased",
+      "dataset_name": "/root/nlp-case-study/artifacts/dataset/conll2003",
+      "seed": 42,
+      "num_pos_labels": 45
+    },
+    "label_mapping": {
+      "id2label": {
+        "0": "POS_0",
+        "1": "POS_1",
+        "2": "POS_3",
+        "3": "POS_4",
+        "4": "POS_5",
+        "5": "POS_6",
+        "6": "POS_7",
+        "7": "POS_8",
+        "8": "POS_10",
+        "9": "POS_11",
+        "10": "POS_12",
+        "11": "POS_13",
+        "12": "POS_14",
+        "13": "POS_15",
+        "14": "POS_16",
+        "15": "POS_17",
+        "16": "POS_18",
+        "17": "POS_19",
+        "18": "POS_20",
+        "19": "POS_21",
+        "20": "POS_22",
+        "21": "POS_23",
+        "22": "POS_24",
+        "23": "POS_25",
+        "24": "POS_26",
+        "25": "POS_27",
+        "26": "POS_28",
+        "27": "POS_29",
+        "28": "POS_30",
+        "29": "POS_31",
+        "30": "POS_32",
+        "31": "POS_33",
+        "32": "POS_34",
+        "33": "POS_35",
+        "34": "POS_36",
+        "35": "POS_37",
+        "36": "POS_38",
+        "37": "POS_39",
+        "38": "POS_40",
+        "39": "POS_41",
+        "40": "POS_42",
+        "41": "POS_43",
+        "42": "POS_44",
+        "43": "POS_45",
+        "44": "POS_46"
+      },
+      "newid_to_oldid": {
+        "0": 0,
+        "1": 1,
+        "2": 3,
+        "3": 4,
+        "4": 5,
+        "5": 6,
+        "6": 7,
+        "7": 8,
+        "8": 10,
+        "9": 11,
+        "10": 12,
+        "11": 13,
+        "12": 14,
+        "13": 15,
+        "14": 16,
+        "15": 17,
+        "16": 18,
+        "17": 19,
+        "18": 20,
+        "19": 21,
+        "20": 22,
+        "21": 23,
+        "22": 24,
+        "23": 25,
+        "24": 26,
+        "25": 27,
+        "26": 28,
+        "27": 29,
+        "28": 30,
+        "29": 31,
+        "30": 32,
+        "31": 33,
+        "32": 34,
+        "33": 35,
+        "34": 36,
+        "35": 37,
+        "36": 38,
+        "37": 39,
+        "38": 40,
+        "39": 41,
+        "40": 42,
+        "41": 43,
+        "42": 44,
+        "43": 45,
+        "44": 46
+      }
+    },
+    "validation_metrics": {
+      "validation_loss": 0.21236881613731384,
+      "validation_accuracy": 0.9471204392352323,
+      "validation_precision_weighted": 0.9467245204617792,
+      "validation_recall_weighted": 0.9471204392352323,
+      "validation_f1_weighted": 0.9466865223825911,
+      "validation_precision_macro": 0.8410008971766675,
+      "validation_recall_macro": 0.8204708898104072,
+      "validation_f1_macro": 0.8286304964342723,
+      "validation_runtime": 2.8901,
+      "validation_samples_per_second": 1124.534,
+      "validation_steps_per_second": 70.586,
+      "epoch": 3.0
+    },
+    "test_metrics": {
+      "test_loss": 0.25996583700180054,
+      "test_accuracy": 0.941509637127167,
+      "test_precision_weighted": 0.9403888793439446,
+      "test_recall_weighted": 0.941509637127167,
+      "test_f1_weighted": 0.9407297658164301,
+      "test_precision_macro": 0.8640234170975678,
+      "test_recall_macro": 0.8484820291131645,
+      "test_f1_macro": 0.8529048178634299,
+      "test_runtime": 2.8077,
+      "test_samples_per_second": 1229.849,
+      "test_steps_per_second": 76.932,
+      "epoch": 3.0
+    },
+    "test_confusion_matrix_shape": [
+      45,
+      45
+    ],
+    "top_confusions": [
+      {
+        "gold_id": 19,
+        "gold_label": "POS_21",
+        "pred_id": 20,
+        "pred_label": "POS_22",
+        "count": 331
+      },
+      {
+        "gold_id": 20,
+        "gold_label": "POS_22",
+        "pred_id": 19,
+        "pred_label": "POS_21",
+        "count": 257
+      },
+      {
+        "gold_id": 14,
+        "gold_label": "POS_16",
+        "pred_id": 20,
+        "pred_label": "POS_22",
+        "count": 191
+      },
+      {
+        "gold_id": 20,
+        "gold_label": "POS_22",
+        "pred_id": 14,
+        "pred_label": "POS_16",
+        "count": 116
+      },
+      {
+        "gold_id": 19,
+        "gold_label": "POS_21",
+        "pred_id": 14,
+        "pred_label": "POS_16",
+        "count": 106
+      },
+      {
+        "gold_id": 38,
+        "gold_label": "POS_40",
+        "pred_id": 36,
+        "pred_label": "POS_38",
+        "count": 82
+      },
+      {
+        "gold_id": 14,
+        "gold_label": "POS_16",
+        "pred_id": 19,
+        "pred_label": "POS_21",
+        "count": 81
+      },
+      {
+        "gold_id": 20,
+        "gold_label": "POS_22",
+        "pred_id": 22,
+        "pred_label": "POS_24",
+        "count": 70
+      },
+      {
+        "gold_id": 36,
+        "gold_label": "POS_38",
+        "pred_id": 38,
+        "pred_label": "POS_40",
+        "count": 68
+      },
+      {
+        "gold_id": 21,
+        "gold_label": "POS_23",
+        "pred_id": 20,
+        "pred_label": "POS_22",
+        "count": 62
+      },
+      {
+        "gold_id": 40,
+        "gold_label": "POS_42",
+        "pred_id": 22,
+        "pred_label": "POS_24",
+        "count": 62
+      },
+      {
+        "gold_id": 14,
+        "gold_label": "POS_16",
+        "pred_id": 9,
+        "pred_label": "POS_11",
+        "count": 61
+      },
+      {
+        "gold_id": 20,
+        "gold_label": "POS_22",
+        "pred_id": 9,
+        "pred_label": "POS_11",
+        "count": 56
+      },
+      {
+        "gold_id": 22,
+        "gold_label": "POS_24",
+        "pred_id": 20,
+        "pred_label": "POS_22",
+        "count": 47
+      },
+      {
+        "gold_id": 20,
+        "gold_label": "POS_22",
+        "pred_id": 21,
+        "pred_label": "POS_23",
+        "count": 36
+      },
+      {
+        "gold_id": 35,
+        "gold_label": "POS_37",
+        "pred_id": 19,
+        "pred_label": "POS_21",
+        "count": 34
+      },
+      {
+        "gold_id": 14,
+        "gold_label": "POS_16",
+        "pred_id": 38,
+        "pred_label": "POS_40",
+        "count": 33
+      },
+      {
+        "gold_id": 9,
+        "gold_label": "POS_11",
+        "pred_id": 20,
+        "pred_label": "POS_22",
+        "count": 32
+      },
+      {
+        "gold_id": 28,
+        "gold_label": "POS_30",
+        "pred_id": 20,
+        "pred_label": "POS_22",
+        "count": 32
+      },
+      {
+        "gold_id": 21,
+        "gold_label": "POS_23",
+        "pred_id": 22,
+        "pred_label": "POS_24",
+        "count": 28
+      },
+      {
+        "gold_id": 19,
+        "gold_label": "POS_21",
+        "pred_id": 22,
+        "pred_label": "POS_24",
+        "count": 27
+      },
+      {
+        "gold_id": 19,
+        "gold_label": "POS_21",
+        "pred_id": 35,
+        "pred_label": "POS_37",
+        "count": 27
+      },
+      {
+        "gold_id": 37,
+        "gold_label": "POS_39",
+        "pred_id": 19,
+        "pred_label": "POS_21",
+        "count": 26
+      },
+      {
+        "gold_id": 14,
+        "gold_label": "POS_16",
+        "pred_id": 28,
+        "pred_label": "POS_30",
+        "count": 25
+      },
+      {
+        "gold_id": 19,
+        "gold_label": "POS_21",
+        "pred_id": 37,
+        "pred_label": "POS_39",
+        "count": 24
+      }
+    ],
+    "per_tag_stats": [
+      {
+        "label_id": 20,
+        "label": "POS_22",
+        "support": 8595,
+        "correct": 7994,
+        "per_tag_accuracy": 0.9300756253635835
+      },
+      {
+        "label_id": 9,
+        "label": "POS_11",
+        "support": 5962,
+        "correct": 5918,
+        "per_tag_accuracy": 0.992619926199262
+      },
+      {
+        "label_id": 19,
+        "label": "POS_21",
+        "support": 4931,
+        "correct": 4376,
+        "per_tag_accuracy": 0.8874467653619955
+      },
+      {
+        "label_id": 13,
+        "label": "POS_15",
+        "support": 4018,
+        "correct": 3970,
+        "per_tag_accuracy": 0.9880537580886013
+      },
+      {
+        "label_id": 10,
+        "label": "POS_12",
+        "support": 2799,
+        "correct": 2775,
+        "per_tag_accuracy": 0.9914255091103966
+      },
+      {
+        "label_id": 14,
+        "label": "POS_16",
+        "support": 2393,
+        "correct": 1961,
+        "per_tag_accuracy": 0.8194734642707898
+      },
+      {
+        "label_id": 22,
+        "label": "POS_24",
+        "support": 2174,
+        "correct": 2050,
+        "per_tag_accuracy": 0.9429622815087396
+      },
+      {
+        "label_id": 36,
+        "label": "POS_38",
+        "support": 1699,
+        "correct": 1612,
+        "per_tag_accuracy": 0.9487934078869924
+      },
+      {
+        "label_id": 5,
+        "label": "POS_6",
+        "support": 1637,
+        "correct": 1637,
+        "per_tag_accuracy": 1.0
+      },
+      {
+        "label_id": 6,
+        "label": "POS_7",
+        "support": 1630,
+        "correct": 1630,
+        "per_tag_accuracy": 1.0
+      },
+      {
+        "label_id": 35,
+        "label": "POS_37",
+        "support": 933,
+        "correct": 838,
+        "per_tag_accuracy": 0.8981779206859593
+      },
+      {
+        "label_id": 28,
+        "label": "POS_30",
+        "support": 888,
+        "correct": 757,
+        "per_tag_accuracy": 0.8524774774774775
+      },
+      {
+        "label_id": 38,
+        "label": "POS_40",
+        "support": 866,
+        "correct": 751,
+        "per_tag_accuracy": 0.8672055427251733
+      },
+      {
+        "label_id": 33,
+        "label": "POS_35",
+        "support": 818,
+        "correct": 814,
+        "per_tag_accuracy": 0.9951100244498777
+      },
+      {
+        "label_id": 8,
+        "label": "POS_10",
+        "support": 765,
+        "correct": 760,
+        "per_tag_accuracy": 0.9934640522875817
+      },
+      {
+        "label_id": 3,
+        "label": "POS_4",
+        "support": 688,
+        "correct": 688,
+        "per_tag_accuracy": 1.0
+      },
+      {
+        "label_id": 4,
+        "label": "POS_5",
+        "support": 686,
+        "correct": 686,
+        "per_tag_accuracy": 1.0
+      },
+      {
+        "label_id": 26,
+        "label": "POS_28",
+        "support": 605,
+        "correct": 584,
+        "per_tag_accuracy": 0.9652892561983472
+      },
+      {
+        "label_id": 7,
+        "label": "POS_8",
+        "support": 599,
+        "correct": 599,
+        "per_tag_accuracy": 1.0
+      },
+      {
+        "label_id": 40,
+        "label": "POS_42",
+        "support": 502,
+        "correct": 419,
+        "per_tag_accuracy": 0.8346613545816733
+      },
+      {
+        "label_id": 37,
+        "label": "POS_39",
+        "support": 484,
+        "correct": 431,
+        "per_tag_accuracy": 0.890495867768595
+      },
+      {
+        "label_id": 0,
+        "label": "POS_0",
+        "support": 421,
+        "correct": 421,
+        "per_tag_accuracy": 1.0
+      },
+      {
+        "label_id": 25,
+        "label": "POS_27",
+        "support": 347,
+        "correct": 336,
+        "per_tag_accuracy": 0.968299711815562
+      },
+      {
+        "label_id": 39,
+        "label": "POS_41",
+        "support": 331,
+        "correct": 287,
+        "per_tag_accuracy": 0.8670694864048338
+      },
+      {
+        "label_id": 27,
+        "label": "POS_29",
+        "support": 296,
+        "correct": 295,
+        "per_tag_accuracy": 0.9966216216216216
+      },
+      {
+        "label_id": 18,
+        "label": "POS_20",
+        "support": 268,
+        "correct": 265,
+        "per_tag_accuracy": 0.9888059701492538
+      },
+      {
+        "label_id": 21,
+        "label": "POS_23",
+        "support": 160,
+        "correct": 68,
+        "per_tag_accuracy": 0.425
+      },
+      {
+        "label_id": 32,
+        "label": "POS_34",
+        "support": 117,
+        "correct": 115,
+        "per_tag_accuracy": 0.9829059829059829
+      },
+      {
+        "label_id": 42,
+        "label": "POS_44",
+        "support": 114,
+        "correct": 113,
+        "per_tag_accuracy": 0.9912280701754386
+      },
+      {
+        "label_id": 41,
+        "label": "POS_43",
+        "support": 108,
+        "correct": 102,
+        "per_tag_accuracy": 0.9444444444444444
+      },
+      {
+        "label_id": 31,
+        "label": "POS_33",
+        "support": 106,
+        "correct": 76,
+        "per_tag_accuracy": 0.7169811320754716
+      },
+      {
+        "label_id": 2,
+        "label": "POS_3",
+        "support": 94,
+        "correct": 93,
+        "per_tag_accuracy": 0.9893617021276596
+      },
+      {
+        "label_id": 15,
+        "label": "POS_17",
+        "support": 92,
+        "correct": 77,
+        "per_tag_accuracy": 0.8369565217391305
+      },
+      {
+        "label_id": 44,
+        "label": "POS_46",
+        "support": 74,
+        "correct": 74,
+        "per_tag_accuracy": 1.0
+      },
+      {
+        "label_id": 16,
+        "label": "POS_18",
+        "support": 56,
+        "correct": 49,
+        "per_tag_accuracy": 0.875
+      },
+      {
+        "label_id": 29,
+        "label": "POS_31",
+        "support": 43,
+        "correct": 23,
+        "per_tag_accuracy": 0.5348837209302325
+      },
+      {
+        "label_id": 11,
+        "label": "POS_13",
+        "support": 34,
+        "correct": 33,
+        "per_tag_accuracy": 0.9705882352941176
+      },
+      {
+        "label_id": 12,
+        "label": "POS_14",
+        "support": 33,
+        "correct": 9,
+        "per_tag_accuracy": 0.2727272727272727
+      },
+      {
+        "label_id": 17,
+        "label": "POS_19",
+        "support": 23,
+        "correct": 0,
+        "per_tag_accuracy": 0.0
+      },
+      {
+        "label_id": 1,
+        "label": "POS_1",
+        "support": 14,
+        "correct": 14,
+        "per_tag_accuracy": 1.0
+      },
+      {
+        "label_id": 30,
+        "label": "POS_32",
+        "support": 9,
+        "correct": 8,
+        "per_tag_accuracy": 0.8888888888888888
+      },
+      {
+        "label_id": 43,
+        "label": "POS_45",
+        "support": 9,
+        "correct": 9,
+        "per_tag_accuracy": 1.0
+      },
+      {
+        "label_id": 24,
+        "label": "POS_26",
+        "support": 7,
+        "correct": 2,
+        "per_tag_accuracy": 0.2857142857142857
+      },
+      {
+        "label_id": 34,
+        "label": "POS_36",
+        "support": 7,
+        "correct": 0,
+        "per_tag_accuracy": 0.0
+      },
+      {
+        "label_id": 23,
+        "label": "POS_25",
+        "support": 0,
+        "correct": 0,
+        "per_tag_accuracy": 0.0
+      }
+    ],
+    "best_model_checkpoint": "case_study_outputs/pos_full_train_confusion/checkpoint-2500",
+    "saved_model_dir": "case_study_outputs/pos_full_train_confusion/best_final_checkpoint"
+  }
