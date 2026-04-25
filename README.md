@@ -68,6 +68,66 @@ requirements.txt
 README.md
 ```
 
+## Environment Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/<your-username>/nlp-case-study.git
+cd nlp-case-study
+```
+
+### 2. Download the dataset and backbone model
+
+The scripts expect the CoNLL-2003 dataset and BERT model files to be available under artifacts/:
+
+```bash
+artifacts/
+  dataset/
+    conll2003/
+  model/
+    bert-base-cased/
+```
+
+You can either place the files manually into these folders or download them with Hugging Face tools.
+
+**Example:**
+
+```python
+from datasets import load_dataset
+from transformers import AutoTokenizer, AutoConfig
+dataset = load_dataset("lhoestq/conll2003")
+dataset.save_to_disk("artifacts/dataset/conll2003")
+tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
+config = AutoConfig.from_pretrained("bert-base-cased")
+tokenizer.save_pretrained("artifacts/model/bert-base-cased")
+config.save_pretrained("artifacts/model/bert-base-cased")
+```
+
+If you use a different local path, update the script arguments accordingly, for example:
+
+```bash
+--dataset_name artifacts/dataset/conll2003
+--model_name artifacts/model/bert-base-cased
+```
+
+### 3. Create a fresh environment and install dependencies
+
+**Using Conda Env:**
+
+```bash
+conda create -n nlp-case-study python=3.10 -y
+conda activate nlp-case-study
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+**To check that the environment works:**
+
+```bash
+python -c "import torch, transformers, datasets; print('Environment is ready')"
+```
+
 ## Running Experiments
 
 Run all commands from the project root:
@@ -84,8 +144,8 @@ Example:
 
 ```bash
 python scripts/01_generate_pos_oof.py \
-  --model_name /root/bert-base-uncased \
-  --dataset_name /root/nlp-case-study/artifacts/dataset/conll2003 \
+  --model_name artifacts/model/bert-base-cased \
+  --dataset_name artifacts/dataset/conll2003 \
   --output_dir ./case_study_outputs/pos_oof \
   --num_folds 5 \
   --num_train_epochs 3 \
@@ -103,8 +163,8 @@ Example:
 
 ```bash
 python scripts/02_train_ner_baseline.py \
-  --model_name /root/bert-base-uncased \
-  --dataset_name /root/nlp-case-study/artifacts/dataset/conll2003 \
+  --model_name artifacts/model/bert-base-cased \
+  --dataset_name artifacts/dataset/conll2003 \
   --output_dir ./case_study_outputs/ner_baseline \
   --seeds 42 43 44 \
   --num_train_epochs 3 \
@@ -123,8 +183,8 @@ Example:
 
 ```bash
 python scripts/03_train_ner_pos_encoder_independent.py \
-  --model_name /root/bert-base-uncased \
-  --dataset_name /root/nlp-case-study/artifacts/dataset/conll2003 \
+  --model_name artifacts/model/bert-base-cased \
+  --dataset_name artifacts/dataset/conll2003 \
   --predicted_pos_dataset_path /root/case_study_outputs/dataset_with_predicted_pos \
   --output_dir ./nlp_case_study_outputs/ner_with_predicted_pos_embd \
   --pos_source gold \
@@ -145,8 +205,8 @@ Example:
 
 ```bash
 python scripts/04_train_ner_pos_encoder_level.py \
-  --model_name /root/bert-base-uncased \
-  --dataset_name /root/nlp-case-study/artifacts/dataset/conll2003 \
+  --model_nameartifacts/model/bert-base-cased \
+  --dataset_name artifacts/dataset/conll2003 \
   --predicted_pos_dataset_path /root/case_study_outputs/dataset_with_predicted_pos \
   --output_dir ./nlp_case_study_outputs/ner_with_mid_pos_injection \
   --pos_source gold \
@@ -167,8 +227,8 @@ Example:
 
 ```bash
 python scripts/05_controlled_pos_corruption.py \
-  --ner_model_dir /root/nlp-case-study/scripts/nlp_case_study_outputs/ner_with_mid_pos_injection/gold_mid_layer_trainable_embed_d32/best_checkpoint \
-  --pos_confusion_dir /root/nlp-case-study/scripts/case_study_outputs/pos_full_train_confusion/best_final_checkpoint \
+  --ner_model_dir artifacts/model/ner_gold_pos_ckpt/best_checkpoint \
+  --pos_confusion_dir artifacts/model/pos_model/best_checkpoint \
   --dataset_name /root/nlp-case-study/artifacts/dataset/conll2003 \
   --fusion_type encoder_level \
   --pos_feature_type trainable_embed \
