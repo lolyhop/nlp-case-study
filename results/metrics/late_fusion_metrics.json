@@ -1,0 +1,193 @@
+{
+    "config": {
+        "model_name": "/root/bert-base-cased",
+        "dataset_name": "/root/nlp-case-study/artifacts/dataset/conll2003",
+        "pos_source": "gold",
+        "pos_injection_type": "mid_layer_trainable_embed",
+        "pos_embed_dim": 32,
+        "num_pos_tags": 45,
+        "run_seeds": [
+            42,
+            43,
+            44
+        ],
+        "num_train_epochs": 3,
+        "train_batch_size": 16,
+        "eval_batch_size": 16,
+        "learning_rate": 2e-05,
+        "weight_decay": 0.01,
+        "warmup_ratio": 0.1,
+        "inject_layer_idx": 10
+    },
+    "runs": [
+        {
+            "seed": 42,
+            "best_validation": {
+                "precision": 0.9459187101108498,
+                "recall": 0.9478290138000673,
+                "f1": 0.9468728984532616,
+                "accuracy": 0.9889412406058954,
+                "macro_precision": 0.9338344059207534,
+                "macro_recall": 0.9301898950160986,
+                "macro_f1": 0.9319808152658384,
+                "loss": 0.046880665386304504
+            },
+            "final_validation": {
+                "precision": 0.9459187101108498,
+                "recall": 0.9478290138000673,
+                "f1": 0.9468728984532616,
+                "accuracy": 0.9889412406058954,
+                "macro_precision": 0.9338344059207534,
+                "macro_recall": 0.9301898950160986,
+                "macro_f1": 0.9319808152658384,
+                "loss": 0.046880665386304504
+            },
+            "test": {
+                "precision": 0.9063822284908322,
+                "recall": 0.9102337110481586,
+                "f1": 0.9083038869257951,
+                "accuracy": 0.9800581457951976,
+                "macro_precision": 0.8600698880959803,
+                "macro_recall": 0.89511696588674,
+                "macro_f1": 0.876501371182369,
+                "loss": 0.12090694265727372
+            }
+        },
+        {
+            "seed": 43,
+            "best_validation": {
+                "precision": 0.9465636027558394,
+                "recall": 0.947997307303938,
+                "f1": 0.947279912553603,
+                "accuracy": 0.9885323780226627,
+                "macro_precision": 0.9335378723061678,
+                "macro_recall": 0.9300897619829485,
+                "macro_f1": 0.931780313942341,
+                "loss": 0.047782664385700696
+            },
+            "final_validation": {
+                "precision": 0.9465636027558394,
+                "recall": 0.947997307303938,
+                "f1": 0.947279912553603,
+                "accuracy": 0.9885323780226627,
+                "macro_precision": 0.9335378723061678,
+                "macro_recall": 0.9300897619829485,
+                "macro_f1": 0.931780313942341,
+                "loss": 0.047782664385700696
+            },
+            "test": {
+                "precision": 0.903476266101994,
+                "recall": 0.9065155807365439,
+                "f1": 0.9049933716305788,
+                "accuracy": 0.9797781845590611,
+                "macro_precision": 0.8611514971010545,
+                "macro_recall": 0.8958479894362513,
+                "macro_f1": 0.8773065053772904,
+                "loss": 0.11973137209187606
+            }
+        },
+        {
+            "seed": 44,
+            "best_validation": {
+                "precision": 0.9474747474747475,
+                "recall": 0.9471558397845843,
+                "f1": 0.9473152667901027,
+                "accuracy": 0.9889801798995366,
+                "macro_precision": 0.9361676367405505,
+                "macro_recall": 0.9302034900465385,
+                "macro_f1": 0.9331463608435103,
+                "loss": 0.04675461244472649
+            },
+            "final_validation": {
+                "precision": 0.9474747474747475,
+                "recall": 0.9471558397845843,
+                "f1": 0.9473152667901027,
+                "accuracy": 0.9889801798995366,
+                "macro_precision": 0.9361676367405505,
+                "macro_recall": 0.9302034900465385,
+                "macro_f1": 0.9331463608435103,
+                "loss": 0.04675461244472649
+            },
+            "test": {
+                "precision": 0.9081434375552022,
+                "recall": 0.9102337110481586,
+                "f1": 0.9091873728888497,
+                "accuracy": 0.9803596425110369,
+                "macro_precision": 0.8623730085386645,
+                "macro_recall": 0.8982363473177087,
+                "macro_f1": 0.8789577393357808,
+                "loss": 0.11992202238225555
+            }
+        }
+    ],
+    "validation_summary": {
+        "precision": {
+            "mean": 0.9466523534471456,
+            "std": 0.0007818059755251776
+        },
+        "recall": {
+            "mean": 0.9476607202961965,
+            "std": 0.0004452627585097079
+        },
+        "f1": {
+            "mean": 0.9471560259323225,
+            "std": 0.00024583197017296455
+        },
+        "accuracy": {
+            "mean": 0.9888179328426983,
+            "std": 0.00024806296293775656
+        },
+        "macro_precision": {
+            "mean": 0.9345133049891571,
+            "std": 0.0014403448211784912
+        },
+        "macro_recall": {
+            "mean": 0.9301610490151951,
+            "std": 6.210947542906435e-05
+        },
+        "macro_f1": {
+            "mean": 0.9323024966838966,
+            "std": 0.0007376518386688491
+        },
+        "loss": {
+            "mean": 0.0471393140722439,
+            "std": 0.0005607112049788535
+        }
+    },
+    "test_summary": {
+        "precision": {
+            "mean": 0.9060006440493428,
+            "std": 0.0023568681248428724
+        },
+        "recall": {
+            "mean": 0.9089943342776204,
+            "std": 0.0021466635362928656
+        },
+        "f1": {
+            "mean": 0.9074948771484079,
+            "std": 0.0022109464610264775
+        },
+        "accuracy": {
+            "mean": 0.9800653242884318,
+            "std": 0.0002907954359215774
+        },
+        "macro_precision": {
+            "mean": 0.8611981312452331,
+            "std": 0.0011522681983505115
+        },
+        "macro_recall": {
+            "mean": 0.8964004342135666,
+            "std": 0.0016314201028415336
+        },
+        "macro_f1": {
+            "mean": 0.8775885386318135,
+            "std": 0.001252235278917874
+        },
+        "loss": {
+            "mean": 0.12018677904380178,
+            "std": 0.0006309228208998089
+        }
+    },
+    "best_seed": 44,
+    "best_model_checkpoint": "nlp_case_study_outputs/ner_with_mid_pos_injection/gold_mid_layer_trainable_embed_d32/best_checkpoint"
+}
