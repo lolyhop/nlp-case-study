@@ -1,4 +1,4 @@
-# POS Tags as Features for BERT-based NER
+# Pipeline Interaction: POS Tags as Features for NER
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10-blue" />
