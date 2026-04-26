@@ -12,6 +12,10 @@
   <b>Do POS tags still help NER when the backbone is already BERT?</b>
 </p>
 
+<p align="center">
+  <img src="poster/poster.png" alt="Project poster preview" width="900"/>
+</p>
+
 This project studies whether explicit POS-tag information helps BERT-based Named Entity Recognition on CoNLL-2003.
 
 We compare a standard BERT NER baseline with several POS-aware NER variants. POS tags are injected either after the encoder, before the final classifier, or inside the encoder. We also test whether POS tagging errors propagate into NER by corrupting POS tags with a realistic error distribution based on a POS tagger confusion matrix.
