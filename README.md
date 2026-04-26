@@ -241,3 +241,15 @@ python scripts/05_controlled_pos_corruption.py \
   --batch_size 16 \
   --corruption_rates 0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
 ```
+
+## Limitations
+
+This project focuses on BERT-based NER on CoNLL-2003. The findings should not be interpreted as evidence that POS tags are never useful for NER.
+
+Explicit POS features may still help in other settings, such as:
+
+- smaller or non-contextual encoders;
+- low-resource datasets;
+- noisier domains;
+- languages with richer morphology;
+- architectures designed to rely more strongly on syntactic features.
